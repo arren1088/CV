@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資管導論 -首頁</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <a href="/" class="title">資訊管理導論-陳恩儒</a>
+    <button class="menu-toggle">
+      <span class="hamburger"></span> <!-- 使用 span 製作漢堡圖標 -->
+    </button>
+    <nav>
+      <ul class="nav-menu">
+
+        <li><a href="/">首頁</a></li>
+        <li><a href="/">首頁</a></li>
+        <li><a href="/">首頁</a></li>
+        <li><a href="/">首頁</a></li>
+        <li><a href="/">首頁</a></li>
+        <li><a href="/">首頁</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1>陳恩儒個人履歷網站</h1>
+  <p>網站建置中</p>
+  <p>敬請更多內容</p>
+</main>
+</body>
+<footer>
+  <p>&copy; 2025 靜宜資管 陳恩儒 - 版權所有</p>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active'); // 同步切換按鈕狀態
+      });
+    } else {
+      console.error('Menu toggle or nav menu not found');
+    }
+  });
+</script>
+</html>
