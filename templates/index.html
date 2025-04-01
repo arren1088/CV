@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>資管導論 -首頁</title>
   <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/menu.js"></script>
 </head>
 <body>
 <header>
@@ -35,19 +36,4 @@
 <footer>
   <p>&copy; 2025 靜宜資管 陳恩儒 - 版權所有</p>
 </footer>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (menuToggle && navMenu) {
-      menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active'); // 同步切換按鈕狀態
-      });
-    } else {
-      console.error('Menu toggle or nav menu not found');
-    }
-  });
-</script>
 </html>
