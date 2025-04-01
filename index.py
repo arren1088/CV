@@ -1,7 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
-from flask import Flask, render_template, request
-from datetime import datetime, timezone, timedelta
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
