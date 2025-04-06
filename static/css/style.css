@@ -161,11 +161,10 @@ footer {
   background: #222;
   color: #fff;
   text-align: center;
-  padding: 13.5px;
+  padding: 20px;
   margin-top: auto;
   position: relative;
   width: 100%;
-  z-index: 1;
 }
 
 footer p {
