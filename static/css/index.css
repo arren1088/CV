@@ -1,0 +1,275 @@
+/* 重置樣式並設置全頁佈局 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff; /* 清新的天藍色背景 */
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f8ff;
+}
+
+/* 主內容區 */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 40px;
+  width: 100%;
+}
+
+/* 區塊樣式 */
+.section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 0;
+  flex: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  color: #ff6347; /* 番茄紅 */
+  font-size: 2.2em; /* 更大的字體 */
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase; /* 大寫，強調活力感 */
+  letter-spacing: 2px; /* 增加字母間距 */
+}
+
+.section h2::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #f39c12; /* 橙色金 */
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  animation: underline 1s ease-in-out infinite; /* 動畫時間調整為 1s */
+}
+
+@keyframes underline {
+  0% { width: 0; }
+  50% { width: 80px; }
+  100% { width: 0; }
+}
+
+.section p, .section ul {
+  font-size: 1.2em; /* 增大內容字體 */
+  color: #333;
+  line-height: 2; /* 增加行間距，使文字更易讀 */
+}
+
+.section ul {
+  list-style-type: none;
+}
+
+.section li {
+  font-size: 1.3em;
+  color: #333;
+  margin: 12px 0;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards; /* 調整動畫時間為 1s */
+}
+
+.section li:nth-child(1) { animation-delay: 0.2s; }
+.section li:nth-child(2) { animation-delay: 0.2s; }
+.section li:nth-child(3) { animation-delay: 0.2s; }
+.section li:nth-child(4) { animation-delay: 0.2s; }
+.section li:nth-child(5) { animation-delay: 0.2s; }
+
+@keyframes fadeInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 2em;
+  }
+
+  .section p, .section ul {
+    font-size: 1.2em;
+  }
+
+  .section li {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 1.6em;
+  }
+
+  .section p, .section ul {
+    font-size: 1em;
+  }
+
+  .section li {
+    font-size: 1em;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  font-size: 1.2em;
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #f39c12;
+}
+
+/* 社交平台 */
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 水平居中圖示 */
+  gap: 120px; /* 增加圖示間距 */
+  margin: 0;
+}
+
+.social-links li {
+  margin: 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #2980b9;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 圖標和文字間距 */
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #f39c12;
+}
+
+.social-links i {
+  font-size: 1em; /* 設定圖示大小 */
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 99px; /* 距離底部20px */
+  right: 90px; /* 距離右邊20px */
+  background-color: #030c2c; /* 番茄紅背景 */
+  color: white;
+  border: none;
+  border-radius: 35%; /* 圓形邊角 */
+  padding: 20px; /* 增加內邊距，讓按鈕更大 */
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  opacity: 0; /* 初始透明度為 0 */
+  transform: scale(0); /* 初始縮放為 0 */
+  animation: fadeInUp 0.6s forwards; /* 顯示時的動畫效果 */
+}
+
+/* 當滾動頁面時，顯示回到頂部按鈕 */
+.show-scroll-to-top {
+  opacity: 1; /* 顯示按鈕 */
+  transform: scale(1); /* 恢復正常大小 */
+}
+
+/* 顯示動畫效果：由小到大，並且淡入 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: scale(0); /* 開始時縮小 */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* 結束時正常大小 */
+  }
+}
+
+/* 隱藏動畫效果：淡出並縮小 */
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: scale(1); /* 開始時正常大小 */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0); /* 結束時縮小 */
+  }
+}
+
+/* 當回到頂部時隱藏按鈕的動畫 */
+.hide-scroll-to-top {
+  animation: fadeOutDown 0.6s forwards; /* 隱藏時的動畫效果 */
+}
+
+/* 經歷容器 */
+.experience-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative; /* 讓子元素可以相對定位 */
+}
+
+/* 圖片容器 */
+.image-overlay {
+  display: flex;
+  width: 550px; /* 設定容器寬度 */
+}
+
+/* 單張圖片樣式 */
+.overlay-image {
+  width: 500px; /* 讓圖片填滿容器 */
+  height: 350px; /* 設定高度 */
+  border-radius: 15px; /* 圓角效果 */
+  object-fit: cover; /* 保持圖片比例且不變形 */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 給圖片加陰影 */
+  transition: transform 0.3s ease; /* 添加平滑過渡效果 */
+}
+
+/* 當使用者懸停時，圖片放大效果 */
+.image-overlay:hover .overlay-image {
+  transform: scale(1.05); /* 放大效果 */
+}
