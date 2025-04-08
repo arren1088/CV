@@ -273,3 +273,101 @@ body {
 .image-overlay:hover .overlay-image {
   transform: scale(1.05); /* 放大效果 */
 }
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .info p {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+  /* 經歷區塊調整 */
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 社交平台調整 */
+  .social-links ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-links a {
+    font-size: 1.3em;
+  }
+
+  /* 標題調整 */
+  .section h2 {
+    font-size: 1.8em;
+  }
+
+  /* 內容調整 */
+  .section p, .section ul {
+    font-size: 1.1em;
+  }
+
+  /* 回到頂部按鈕 */
+  .scroll-to-top {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/* 小螢幕調整 */
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 1.5em;
+  }
+
+  .section p, .section ul {
+    font-size: 1em;
+  }
+
+  .section li {
+    font-size: 1em;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* 社交平台圖示間距縮小 */
+  .social-links ul {
+    gap: 20px;
+  }
+
+  .social-links a {
+    font-size: 1.2em;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay-image {
+    width: 100%;
+    height: auto;
+  }
+}
