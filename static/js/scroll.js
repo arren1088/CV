@@ -7,7 +7,7 @@ function scrollToTop() {
 }
 
 // 監聽滾動事件，當頁面向下滾動時顯示回到頂部按鈕
-window.onscroll = function() {
+window.addEventListener('scroll', function() {
   var scrollTopButton = document.querySelector('.scroll-to-top');
 
   // 確保頁面滾動超過 100px 時顯示按鈕
@@ -20,7 +20,7 @@ window.onscroll = function() {
     scrollTopButton.classList.add('hide-scroll-to-top');
     scrollTopButton.classList.remove('show-scroll-to-top');
   }
-};
+});
 
 // 頁面加載時隱藏回到頂部按鈕
 window.onload = function() {

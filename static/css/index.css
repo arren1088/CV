@@ -3,9 +3,8 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f8ff; /* 清新的天藍色背景 */
+  background-color: #f0f8ff;
 }
-
 
 .container {
   width: 100%;
@@ -17,7 +16,6 @@ body {
   background-color: #f0f8ff;
 }
 
-/* 主內容區 */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -26,7 +24,6 @@ body {
   width: 100%;
 }
 
-/* 區塊樣式 */
 .section {
   background: #fff;
   padding: 30px;
@@ -37,24 +34,24 @@ body {
 }
 
 .section h2 {
-  color: #ff6347; /* 番茄紅 */
-  font-size: 2.2em; /* 更大的字體 */
+  color: #ff6347;
+  font-size: 2.2em;
   font-weight: bold;
   margin-bottom: 20px;
   position: relative;
-  text-transform: uppercase; /* 大寫，強調活力感 */
-  letter-spacing: 2px; /* 增加字母間距 */
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .section h2::after {
   content: '';
   width: 80px;
   height: 4px;
-  background: #f39c12; /* 橙色金 */
+  background: #f39c12;
   position: absolute;
   bottom: -10px;
   left: 0;
-  animation: underline 1s ease-in-out infinite; /* 動畫時間調整為 1s */
+  animation: underline 1s ease-in-out infinite;
 }
 
 @keyframes underline {
@@ -64,9 +61,9 @@ body {
 }
 
 .section p, .section ul {
-  font-size: 1.2em; /* 增大內容字體 */
+  font-size: 1.2em;
   color: #333;
-  line-height: 2; /* 增加行間距，使文字更易讀 */
+  line-height: 2;
 }
 
 .section ul {
@@ -78,7 +75,7 @@ body {
   color: #333;
   margin: 12px 0;
   opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards; /* 調整動畫時間為 1s */
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .section li:nth-child(1) { animation-delay: 0.2s; }
@@ -92,7 +89,6 @@ body {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* 響應式設計 */
 @media (max-width: 768px) {
   .section h2 {
     font-size: 2em;
@@ -152,13 +148,12 @@ body {
   background-color: #f39c12;
 }
 
-/* 社交平台 */
 .social-links ul {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center; /* 水平居中圖示 */
-  gap: 120px; /* 增加圖示間距 */
+  justify-content: center;
+  gap: 120px;
   margin: 0;
 }
 
@@ -172,7 +167,7 @@ body {
   color: #2980b9;
   display: flex;
   align-items: center;
-  gap: 10px; /* 圖標和文字間距 */
+  gap: 10px;
   transition: color 0.3s;
 }
 
@@ -181,37 +176,34 @@ body {
 }
 
 .social-links i {
-  font-size: 1em; /* 設定圖示大小 */
+  font-size: 1em;
 }
 
-/* 經歷容器 */
 .experience-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  position: relative; /* 讓子元素可以相對定位 */
+  position: relative;
 }
 
-/* 圖片容器 */
 .image-overlay {
   display: flex;
-  width: 550px; /* 設定容器寬度 */
+  width: 550px;
 }
 
-/* 單張圖片樣式 */
 .overlay-image {
-  width: 500px; /* 讓圖片填滿容器 */
-  height: 350px; /* 設定高度 */
-  border-radius: 15px; /* 圓角效果 */
-  object-fit: cover; /* 保持圖片比例且不變形 */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 給圖片加陰影 */
-  transition: transform 0.3s ease; /* 添加平滑過渡效果 */
+  width: 500px;
+  height: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-/* 當使用者懸停時，圖片放大效果 */
 .image-overlay:hover .overlay-image {
-  transform: scale(1.05); /* 放大效果 */
+  transform: scale(1.05);
 }
+
 @media (max-width: 900px) {
   .container {
     width: 100%;
@@ -234,7 +226,6 @@ body {
     margin-top: 10px;
   }
 
-  /* 經歷區塊調整 */
   .experience-container {
     flex-direction: column;
     align-items: center;
@@ -245,7 +236,6 @@ body {
     height: auto;
   }
 
-  /* 社交平台調整 */
   .social-links ul {
     flex-direction: column;
     gap: 20px;
@@ -255,18 +245,15 @@ body {
     font-size: 1.3em;
   }
 
-  /* 標題調整 */
   .section h2 {
     font-size: 1.8em;
   }
 
-  /* 內容調整 */
   .section p, .section ul {
     font-size: 1.1em;
   }
 }
 
-/* 小螢幕調整 */
 @media (max-width: 480px) {
   .section h2 {
     font-size: 1.5em;
@@ -285,7 +272,6 @@ body {
     height: 120px;
   }
 
-  /* 社交平台圖示間距縮小 */
   .social-links ul {
     gap: 20px;
   }
