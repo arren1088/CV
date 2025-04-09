@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -6,6 +8,14 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 60px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+}
+
+html {
+  height: 100%;
+  margin: 0;
 }
 
 /* Header 樣式 */
@@ -35,6 +45,11 @@ header {
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
+}
+
+
+main {
+  flex: 1;
 }
 
 /* 導覽列 */
@@ -118,11 +133,19 @@ footer {
   background: #222;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   margin-top: auto;
   width: 100%;
   position: relative;
   z-index: 1001;
+}
+
+footer .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 200px; /* 或依需要調整 */
+  box-sizing: border-box;
 }
 
 /* 響應式設計 */
@@ -169,5 +192,65 @@ footer {
 
   .menu-toggle {
     display: block;
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px; /* 距離底部20px */
+  right: 90px; /* 距離右邊20px */
+  background-color: #030c2c; /* 番茄紅背景 */
+  color: white;
+  border: none;
+  border-radius: 40%; /* 圓形邊角 */
+  padding: 15px; /* 增加內邊距，讓按鈕更大 */
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  opacity: 0; /* 初始透明度為 0 */
+  transform: scale(0); /* 初始縮放為 0 */
+  animation: fadeInUp 0.6s forwards; /* 顯示時的動畫效果 */
+}
+
+/* 當滾動頁面時，顯示回到頂部按鈕 */
+.show-scroll-to-top {
+  opacity: 1; /* 顯示按鈕 */
+  transform: scale(1); /* 恢復正常大小 */
+}
+
+/* 顯示動畫效果：由小到大，並且淡入 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: scale(0); /* 開始時縮小 */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* 結束時正常大小 */
+  }
+}
+
+/* 隱藏動畫效果：淡出並縮小 */
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: scale(1); /* 開始時正常大小 */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0); /* 結束時縮小 */
+  }
+}
+
+/* 當回到頂部時隱藏按鈕的動畫 */
+.hide-scroll-to-top {
+  animation: fadeOutDown 0.6s forwards; /* 隱藏時的動畫效果 */
+}
+
+@media (max-width: 900px) {
+  .scroll-to-top {
+    bottom: 30px;
+    right: 30px;
   }
 }

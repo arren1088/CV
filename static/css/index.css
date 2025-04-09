@@ -1,18 +1,11 @@
-/* 重置樣式並設置全頁佈局 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f0f8ff; /* 清新的天藍色背景 */
-  min-height: 100vh;
 }
+
 
 .container {
   width: 100%;
@@ -26,7 +19,6 @@ body {
 
 /* 主內容區 */
 .main-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -192,59 +184,6 @@ body {
   font-size: 1em; /* 設定圖示大小 */
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 99px; /* 距離底部20px */
-  right: 90px; /* 距離右邊20px */
-  background-color: #030c2c; /* 番茄紅背景 */
-  color: white;
-  border: none;
-  border-radius: 35%; /* 圓形邊角 */
-  padding: 20px; /* 增加內邊距，讓按鈕更大 */
-  font-size: 1.5em;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-  opacity: 0; /* 初始透明度為 0 */
-  transform: scale(0); /* 初始縮放為 0 */
-  animation: fadeInUp 0.6s forwards; /* 顯示時的動畫效果 */
-}
-
-/* 當滾動頁面時，顯示回到頂部按鈕 */
-.show-scroll-to-top {
-  opacity: 1; /* 顯示按鈕 */
-  transform: scale(1); /* 恢復正常大小 */
-}
-
-/* 顯示動畫效果：由小到大，並且淡入 */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: scale(0); /* 開始時縮小 */
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1); /* 結束時正常大小 */
-  }
-}
-
-/* 隱藏動畫效果：淡出並縮小 */
-@keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-    transform: scale(1); /* 開始時正常大小 */
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0); /* 結束時縮小 */
-  }
-}
-
-/* 當回到頂部時隱藏按鈕的動畫 */
-.hide-scroll-to-top {
-  animation: fadeOutDown 0.6s forwards; /* 隱藏時的動畫效果 */
-}
-
 /* 經歷容器 */
 .experience-container {
   display: flex;
@@ -324,12 +263,6 @@ body {
   /* 內容調整 */
   .section p, .section ul {
     font-size: 1.1em;
-  }
-
-  /* 回到頂部按鈕 */
-  .scroll-to-top {
-    bottom: 30px;
-    right: 30px;
   }
 }
 
