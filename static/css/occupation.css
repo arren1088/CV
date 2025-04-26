@@ -1,0 +1,140 @@
+/* 保留全局樣式 */
+main {
+  flex: 1;
+  margin-top: 60px; /* 使主內容不會被固定的 header 擋住 */
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+  gap: 30px; /* 增加內容間距 */
+}
+
+h2 {
+  font-size: 2.2em;
+  color: #2c3e50; /* 深色文字讓標題突出 */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 3px solid #f39c12; /* 溫暖金色 */
+  padding-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-align: center; /* 使標題居中 */
+}
+
+h2:hover {
+  transform: translateY(-10px);
+  color: #f39c12; /* 溫暖金色 */
+}
+
+section {
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s forwards;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 增加內容間距 */
+  text-align: center; /* 使段落文字居中 */
+  color: #34495e; /* 增加字體顏色的深度 */
+  width: 100%;
+  max-width: 1200px; /* 限制最大寬度 */
+}
+
+section:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* 更柔和的陰影效果 */
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center; /* 使列表文字居中 */
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #34495e; /* 更深的顏色 */
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul li:hover {
+  color: #f39c12; /* 溫暖金色 */
+}
+
+#salary-benefits p {
+  font-weight: bold;
+  color: #34495e; /* 深灰色 */
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+  text-align: center; /* 使段落文字居中 */
+}
+
+#salary-benefits p:hover {
+  color: #f39c12; /* 溫暖金色 */
+}
+
+/* 調整不同區域內文本的顏色 */
+#salary-benefits ul li {
+  color: #34495e; /* 更深的顏色 */
+}
+
+#job-requirements ul li::before {
+  content: "•"; /* 更簡單的符號 */
+  color: #e74c3c; /* 強烈紅色 */
+  font-size: 1.5em;
+}
+
+/* 輕微動畫效果 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 行動裝置的響應式樣式 */
+@media (max-width: 768px) {
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  ul li {
+    font-size: 1.1em;
+  }
+
+  #salary-benefits p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  ul li {
+    font-size: 1em;
+  }
+
+  #salary-benefits p {
+    font-size: 1.1em;
+  }
+}

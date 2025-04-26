@@ -155,13 +155,13 @@
   padding-bottom: 40px;
 }
 header {
-  z-index: 1000;  /* 確保 header 在畫布之上 */
+  z-index: 1000;
 }
 
 footer {
-  z-index: 1000;  /* 確保 footer 在畫布之上 */
+  z-index: 1000;
 }
 
 canvas {
-  z-index: 0;  /* 保持畫布在底層 */
+  z-index: 0;
 }
