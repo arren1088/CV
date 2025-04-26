@@ -154,3 +154,14 @@
   background-color: #f0f8ff;
   padding-bottom: 40px;
 }
+header {
+  z-index: 1000;  /* 確保 header 在畫布之上 */
+}
+
+footer {
+  z-index: 1000;  /* 確保 footer 在畫布之上 */
+}
+
+canvas {
+  z-index: 0;  /* 保持畫布在底層 */
+}
